@@ -1,9 +1,5 @@
 from django import forms
 
-my_default_errors = {
-    'required': 'O preenchimento dese campo é obrigatorio!',
-    'invalid': 'Digite um email válido!'
-}
 class ContactForm(forms.Form):
     nome_completo = forms.CharField(
         error_messages={'required': 'Obrigatório o preenchimento do nome'},
@@ -32,8 +28,8 @@ class ContactForm(forms.Form):
                 }
             )
 )
-    def clean_email(self):
-        email = self.cleaned_data.get("email")
-        if not "gmail.com" in email:
-            raise forms.ValidationError("O Email deve ser do gmail.com")
-        return email
+##    def clean_email(self):
+##        email = self.cleaned_data.get("email")
+##        if not "gmail.com" in email:
+##            raise forms.ValidationError("O Email deve ser do gmail.com")
+##        return email
