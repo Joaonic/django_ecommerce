@@ -2,6 +2,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
-/products
 *.sqlite3
-/static_cdn
+products/
+static_local/
